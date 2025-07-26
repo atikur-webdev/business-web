@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Coverflow Effect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #service {
+            height: 100%;
+            padding: 40px 30px;
+            background-color: #09151e;
+        }
+        .swiper {
+            width: 80%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            width: 300px;
+            flex-direction: column;
+            padding: 20px;
+            border: 1px solid #4b7c9e;
+            text-align: center;
+        }
+        .swiper-slide img {
+            height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+        }
+        .swiper-card-content h5 {
+            font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: white;
+    margin: 20px 0;
+        }
+        .swiper-card-content p {
+            color: #fffffff7;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 1.4px;
+        }
+        .swiper-card-content button {
+            padding: 8px 27px;
+    border: none;
+    background: #4b7c9e;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease-out;
+        }
+        .swiper-card-content button:hover {
+            background-color: transparent;
+            border: 1px solid #4b7c9e;
+        }
+    </style>
+</head>
+<body>
+<section id="service">
+    <div class="service-headline">
+        <h3>Our Services</h3>
+    </div>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper-img">
+                    <img src="image for new project/card-img-1.png" alt="">
+                </div>
+                <div class="swiper-card-content">
+                    <h5>Communication</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, voluptates! Ad deleniti doloribus sed ndis.
+                    </p>
+                    <button>View more</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="image for new project/photo-1478760329108-5c3ed9d495a0.avif" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="image for new project/photo-1478760329108-5c3ed9d495a0.avif" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="image for new project/photo-1478760329108-5c3ed9d495a0.avif" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="image for new project/photo-1478760329108-5c3ed9d495a0.avif" alt="">
+            </div>
+        </div>
+
+        <!-- Pagination (Optional) -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+    <!-- Swiper Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+</html>
